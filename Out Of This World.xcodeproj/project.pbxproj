@@ -31,6 +31,7 @@
 		F5A96CD817E396A2005E14AA /* Saturn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5A96CD017E396A2005E14AA /* Saturn.jpg */; };
 		F5A96CD917E396A2005E14AA /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5A96CD117E396A2005E14AA /* Uranus.jpg */; };
 		F5A96CDC17E3A2C5005E14AA /* AstronomicalImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A96CDB17E3A2C5005E14AA /* AstronomicalImageViewController.m */; };
+		F5F1488A17E78F19007E17C6 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F1488917E78F19007E17C6 /* AstronomicalData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		F5A96CD117E396A2005E14AA /* Uranus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uranus.jpg; sourceTree = "<group>"; };
 		F5A96CDA17E3A2C5005E14AA /* AstronomicalImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalImageViewController.h; sourceTree = "<group>"; };
 		F5A96CDB17E3A2C5005E14AA /* AstronomicalImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalImageViewController.m; sourceTree = "<group>"; };
+		F5F1488817E78F19007E17C6 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
+		F5F1488917E78F19007E17C6 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				F5A96CDB17E3A2C5005E14AA /* AstronomicalImageViewController.m */,
 				F5A96CC617E38F96005E14AA /* AstronomicalObject.h */,
 				F5A96CC717E38F96005E14AA /* AstronomicalObject.m */,
+				F5F1488817E78F19007E17C6 /* AstronomicalData.h */,
+				F5F1488917E78F19007E17C6 /* AstronomicalData.m */,
 				F5A96CA617E38AD4005E14AA /* Images.xcassets */,
 				F5A96C9517E38AD4005E14AA /* Supporting Files */,
 			);
@@ -305,6 +310,7 @@
 				F5A96CC817E38F96005E14AA /* AstronomicalObject.m in Sources */,
 				F5A96CDC17E3A2C5005E14AA /* AstronomicalImageViewController.m in Sources */,
 				F5A96C9B17E38AD4005E14AA /* main.m in Sources */,
+				F5F1488A17E78F19007E17C6 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +519,7 @@
 				F5A96CBF17E38AD4005E14AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5A96CC017E38AD4005E14AA /* Build configuration list for PBXNativeTarget "Out Of This WorldTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +528,7 @@
 				F5A96CC217E38AD4005E14AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,11 +10,11 @@
 
 @implementation AstronomicalObject
 
-- (id)initWithName:(NSString *)name andImage:(UIImage *)image
+- (id)initWithInfo:(NSDictionary *)info andImage:(UIImage *)image
 {
     self = [super init];
     if (self) {
-        self.name = name;
+        self.astronomicalInformation = info;
         self.image = image;
     }
     return self;

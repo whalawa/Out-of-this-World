@@ -10,15 +10,11 @@
 
 @interface AstronomicalObject : NSObject
 
-@property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) UIImage *image;
-@property (nonatomic) NSUInteger diameter;
-@property (nonatomic) NSUInteger lenghtOfYear;
-@property (nonatomic) NSInteger temperature;
-@property (nonatomic) NSUInteger numberOfMoons;
-@property (strong, nonatomic) NSString *nickname;
+@property (strong, nonatomic) NSDictionary *astronomicalInformation;
 
-- (id)initWithName:(NSString *)name andImage:(UIImage *)image;
+
+- (id)initWithInfo:(NSDictionary *)info andImage:(UIImage *)image;
 
 
 

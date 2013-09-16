@@ -9,10 +9,11 @@
 #import "PlanetsTableViewController.h"
 #import "AstronomicalObject.h"
 #import "AstronomicalImageViewController.h"
+#import "AstronomicalData.h"
 
 @interface PlanetsTableViewController ()
 
-@property (strong, nonatomic) NSArray *outerSpaceBodies;
+@property (strong, nonatomic) NSMutableArray *outerSpaceBodies;
 
 @end
 
@@ -31,24 +32,14 @@
 {
     [super viewDidLoad];
     
-    AstronomicalObject *mercury = [[AstronomicalObject alloc] initWithName:@"Mercury" andImage:[UIImage imageNamed:@"Mercury.jpg"]];
-    mercury.nickname = @"Hermes";
-    AstronomicalObject *venus = [[AstronomicalObject alloc] initWithName:@"Venus" andImage:[UIImage imageNamed:@"Venus.jpg"]];
-    venus.nickname = @"Aphrodite";
-    AstronomicalObject *earth = [[AstronomicalObject alloc] initWithName:@"Earth" andImage:[UIImage imageNamed:@"Earth.jpg"]];
-    earth.nickname = @"Gaea";
-    AstronomicalObject *mars = [[AstronomicalObject alloc] initWithName:@"Mars" andImage:[UIImage imageNamed:@"Mars.jpg"]];
-    mars.nickname = @"Ares";
-    AstronomicalObject *jupiter = [[AstronomicalObject alloc] initWithName:@"Jupiter" andImage:[UIImage imageNamed:@"Jupiter.jpg"]];
-    jupiter.nickname = @"Zeus";
-    AstronomicalObject *saturn = [[AstronomicalObject alloc] initWithName:@"Saturn" andImage:[UIImage imageNamed:@"Saturn.jpg"]];
-    saturn.nickname = @"Cronus";
-    AstronomicalObject *neptune = [[AstronomicalObject alloc] initWithName:@"Neptune" andImage:[UIImage imageNamed:@"Neptune.jpg"]];
-    neptune.nickname = @"Poseidon";
-    AstronomicalObject *uranus = [[AstronomicalObject alloc] initWithName:@"Uranus" andImage:[UIImage imageNamed:@"Uranus.jpg"]];
-    uranus.nickname = @"Uranus";
+    self.outerSpaceBodies = [[NSMutableArray alloc] init];
     
-    self.outerSpaceBodies = @[mercury, venus, earth, mars, jupiter, saturn, neptune, uranus];
+    for (NSDictionary *planetInformation in [AstronomicalData allKnownPlanets]) {
+        AstronomicalObject *planet = [[AstronomicalObject alloc] initWithInfo:planetInformation andImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", planetInformation[PLANET_NAME]]]];
+        [self.outerSpaceBodies addObject:planet];
+    }
+    
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -88,16 +79,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     AstronomicalObject *spaceObject = [self.outerSpaceBodies objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = spaceObject.name;
+    cell.textLabel.text = spaceObject.astronomicalInformation[PLANET_NAME];
     cell.textLabel.textColor = [UIColor whiteColor];
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Also known as %@", spaceObject.nickname];
-    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.85 alpha:1.0];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Also known as %@", spaceObject.astronomicalInformation[PLANET_NICKNAME]];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.75 alpha:1.0];
     
     cell.imageView.image = spaceObject.image;
     
