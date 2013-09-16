@@ -15,28 +15,28 @@
 {
     NSMutableArray *planetInformation = [@[] mutableCopy];
     
-    NSDictionary *mercuryDictionary = @{PLANET_NAME : @"Mercury", PLANET_GRAVITY : @3.7, PLANET_DIAMETER : @4879, PLANET_YEAR_LENGTH : @88.0, PLANET_TEMPERATURE : @167, PLANET_NUMBER_OF_MOONS : @0, PLANET_NICKNAME : @"Hermes"};
+    NSDictionary *mercuryDictionary = @{PLANET_NAME : @"Mercury", PLANET_GRAVITY : @3.7, PLANET_DIAMETER : @4879, PLANET_YEAR_LENGTH : @88.0, PLANET_DAY_LENGTH : @4222.6, PLANET_TEMPERATURE : @167, PLANET_NUMBER_OF_MOONS : @0, PLANET_NICKNAME : @"Hermes"};
     [planetInformation addObject:mercuryDictionary];
     
-    NSDictionary *venusDictionary = @{PLANET_NAME : @"Venus", PLANET_GRAVITY : @8.9, PLANET_DIAMETER : @12104, PLANET_YEAR_LENGTH : @224.7, PLANET_TEMPERATURE : @464, PLANET_NUMBER_OF_MOONS : @0, PLANET_NICKNAME : @"Aphrodite"};
+    NSDictionary *venusDictionary = @{PLANET_NAME : @"Venus", PLANET_GRAVITY : @8.9, PLANET_DIAMETER : @12104, PLANET_YEAR_LENGTH : @224.7, PLANET_DAY_LENGTH : @2802.0, PLANET_TEMPERATURE : @464, PLANET_NUMBER_OF_MOONS : @0, PLANET_NICKNAME : @"Aphrodite"};
     [planetInformation addObject:venusDictionary];
     
-    NSDictionary *earthDictionary = @{PLANET_NAME : @"Earth", PLANET_GRAVITY : @9.8, PLANET_DIAMETER : @12756, PLANET_YEAR_LENGTH : @365.2, PLANET_TEMPERATURE : @15, PLANET_NUMBER_OF_MOONS : @1, PLANET_NICKNAME : @"Gaea"};
+    NSDictionary *earthDictionary = @{PLANET_NAME : @"Earth", PLANET_GRAVITY : @9.8, PLANET_DIAMETER : @12756, PLANET_YEAR_LENGTH : @365.2, PLANET_DAY_LENGTH : @24.0, PLANET_TEMPERATURE : @15, PLANET_NUMBER_OF_MOONS : @1, PLANET_NICKNAME : @"Gaea"};
     [planetInformation addObject:earthDictionary];
     
-    NSDictionary *marsDictionary = @{PLANET_NAME : @"Mars", PLANET_GRAVITY : @3.7, PLANET_DIAMETER : @6792, PLANET_YEAR_LENGTH : @687, PLANET_TEMPERATURE : @-65, PLANET_NUMBER_OF_MOONS : @2, PLANET_NICKNAME : @"Ares"};
+    NSDictionary *marsDictionary = @{PLANET_NAME : @"Mars", PLANET_GRAVITY : @3.7, PLANET_DIAMETER : @6792, PLANET_YEAR_LENGTH : @687, PLANET_DAY_LENGTH : @24.7, PLANET_TEMPERATURE : @-65, PLANET_NUMBER_OF_MOONS : @2, PLANET_NICKNAME : @"Ares"};
     [planetInformation addObject:marsDictionary];
     
-    NSDictionary *jupiterDictionary = @{PLANET_NAME : @"Jupiter", PLANET_GRAVITY : @23.1, PLANET_DIAMETER : @142984, PLANET_YEAR_LENGTH : @4331, PLANET_TEMPERATURE : @-110, PLANET_NUMBER_OF_MOONS : @67, PLANET_NICKNAME : @"Zeus"};
+    NSDictionary *jupiterDictionary = @{PLANET_NAME : @"Jupiter", PLANET_GRAVITY : @23.1, PLANET_DIAMETER : @142984, PLANET_YEAR_LENGTH : @4331, PLANET_DAY_LENGTH : @9.9, PLANET_TEMPERATURE : @-110, PLANET_NUMBER_OF_MOONS : @67, PLANET_NICKNAME : @"Zeus"};
     [planetInformation addObject:jupiterDictionary];
     
-    NSDictionary *saturnDictionary = @{PLANET_NAME : @"Saturn", PLANET_GRAVITY : @9.0, PLANET_DIAMETER : @120536, PLANET_YEAR_LENGTH : @10747, PLANET_TEMPERATURE : @-140, PLANET_NUMBER_OF_MOONS : @62, PLANET_NICKNAME : @"Cronus"};
+    NSDictionary *saturnDictionary = @{PLANET_NAME : @"Saturn", PLANET_GRAVITY : @9.0, PLANET_DIAMETER : @120536, PLANET_YEAR_LENGTH : @10747, PLANET_DAY_LENGTH : @10.7, PLANET_TEMPERATURE : @-140, PLANET_NUMBER_OF_MOONS : @62, PLANET_NICKNAME : @"Cronus"};
     [planetInformation addObject:saturnDictionary];
     
-    NSDictionary *uranusDictionary = @{PLANET_NAME : @"Uranus", PLANET_GRAVITY : @8.7, PLANET_DIAMETER : @51118, PLANET_YEAR_LENGTH : @30589, PLANET_TEMPERATURE : @-195, PLANET_NUMBER_OF_MOONS : @27, PLANET_NICKNAME : @"Ouranos"};
+    NSDictionary *uranusDictionary = @{PLANET_NAME : @"Uranus", PLANET_GRAVITY : @8.7, PLANET_DIAMETER : @51118, PLANET_YEAR_LENGTH : @30589, PLANET_DAY_LENGTH : @17.2, PLANET_TEMPERATURE : @-195, PLANET_NUMBER_OF_MOONS : @27, PLANET_NICKNAME : @"Ouranos"};
     [planetInformation addObject:uranusDictionary];
     
-    NSDictionary *neptuneDictionary = @{PLANET_NAME : @"Neptune", PLANET_GRAVITY : @11.0, PLANET_DIAMETER : @49528, PLANET_YEAR_LENGTH : @59800, PLANET_TEMPERATURE : @-100, PLANET_NUMBER_OF_MOONS : @14, PLANET_NICKNAME : @"Poseidon"};
+    NSDictionary *neptuneDictionary = @{PLANET_NAME : @"Neptune", PLANET_GRAVITY : @11.0, PLANET_DIAMETER : @49528, PLANET_YEAR_LENGTH : @59800, PLANET_DAY_LENGTH : @16.1, PLANET_TEMPERATURE : @-100, PLANET_NUMBER_OF_MOONS : @14, PLANET_NICKNAME : @"Poseidon"};
     [planetInformation addObject:neptuneDictionary];
     
     return planetInformation;

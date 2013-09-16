@@ -32,6 +32,7 @@
 		F5A96CD917E396A2005E14AA /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5A96CD117E396A2005E14AA /* Uranus.jpg */; };
 		F5A96CDC17E3A2C5005E14AA /* AstronomicalImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A96CDB17E3A2C5005E14AA /* AstronomicalImageViewController.m */; };
 		F5F1488A17E78F19007E17C6 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F1488917E78F19007E17C6 /* AstronomicalData.m */; };
+		F5F1488D17E7A5BF007E17C6 /* PlanetInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F1488C17E7A5BF007E17C6 /* PlanetInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		F5A96CDB17E3A2C5005E14AA /* AstronomicalImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalImageViewController.m; sourceTree = "<group>"; };
 		F5F1488817E78F19007E17C6 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
 		F5F1488917E78F19007E17C6 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
+		F5F1488B17E7A5BF007E17C6 /* PlanetInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanetInfoViewController.h; sourceTree = "<group>"; };
+		F5F1488C17E7A5BF007E17C6 /* PlanetInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanetInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				F5A96CA017E38AD4005E14AA /* Main.storyboard */,
 				F5A96CC317E38B0B005E14AA /* PlanetsTableViewController.h */,
 				F5A96CC417E38B0B005E14AA /* PlanetsTableViewController.m */,
+				F5F1488B17E7A5BF007E17C6 /* PlanetInfoViewController.h */,
+				F5F1488C17E7A5BF007E17C6 /* PlanetInfoViewController.m */,
 				F5A96CDA17E3A2C5005E14AA /* AstronomicalImageViewController.h */,
 				F5A96CDB17E3A2C5005E14AA /* AstronomicalImageViewController.m */,
 				F5A96CC617E38F96005E14AA /* AstronomicalObject.h */,
@@ -309,6 +314,7 @@
 				F5A96CC517E38B0B005E14AA /* PlanetsTableViewController.m in Sources */,
 				F5A96CC817E38F96005E14AA /* AstronomicalObject.m in Sources */,
 				F5A96CDC17E3A2C5005E14AA /* AstronomicalImageViewController.m in Sources */,
+				F5F1488D17E7A5BF007E17C6 /* PlanetInfoViewController.m in Sources */,
 				F5A96C9B17E38AD4005E14AA /* main.m in Sources */,
 				F5F1488A17E78F19007E17C6 /* AstronomicalData.m in Sources */,
 			);

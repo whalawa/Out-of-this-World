@@ -38,7 +38,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="IyV-U1-sy3" kind="push" id="ZHt-CU-buK"/>
+                                    <segue destination="Ju4-x2-wXk" kind="push" id="s0c-X6-RjU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,34 +54,78 @@
             </objects>
             <point key="canvasLocation" x="593" y="140"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="IYg-kK-V4J">
+        <!--Planet Info View Controller-->
+        <scene sceneID="6gd-nU-aZX">
             <objects>
-                <tableViewController id="eNN-gL-ne4" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bVM-rl-eP6">
+                <viewController id="Ju4-x2-wXk" customClass="PlanetInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4NN-nE-l0b"/>
+                        <viewControllerLayoutGuide type="bottom" id="vno-2o-Gbs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8LL-z9-fzY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oKL-QN-tbv">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oKL-QN-tbv" id="MV7-ig-IIA">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="eNN-gL-ne4" id="rc2-lL-FYy"/>
-                            <outlet property="delegate" destination="eNN-gL-ne4" id="dYn-gN-e4Q"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="FS8-Ed-x1l"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uuH-82-Ega" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HYD-ff-Zl2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Planet Info Cell" textLabel="1dz-Gj-UDx" detailTextLabel="fto-Va-qP6" rowHeight="90" style="IBUITableViewCellStyleValue1" id="MOn-3y-vZi">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MOn-3y-vZi" id="U4j-5s-tEP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1dz-Gj-UDx">
+                                                    <rect key="frame" x="15" y="34" width="33" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fto-Va-qP6">
+                                                    <rect key="frame" x="251" y="32" width="54" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ju4-x2-wXk" id="7Z7-c2-YOz"/>
+                                    <outlet property="delegate" destination="Ju4-x2-wXk" id="qpM-5L-mdV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HYD-ff-Zl2" firstAttribute="top" secondItem="8LL-z9-fzY" secondAttribute="top" id="ALi-vG-tvZ"/>
+                            <constraint firstAttribute="bottom" secondItem="HYD-ff-Zl2" secondAttribute="bottom" id="T4M-Hw-e5C"/>
+                            <constraint firstItem="HYD-ff-Zl2" firstAttribute="leading" secondItem="8LL-z9-fzY" secondAttribute="leading" id="e0u-q9-prv"/>
+                            <constraint firstAttribute="trailing" secondItem="HYD-ff-Zl2" secondAttribute="trailing" id="gn7-ag-ejz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IoN-Kh-b6s">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="t5O-Er-beN">
+                            <connections>
+                                <segue destination="IyV-U1-sy3" kind="push" id="hWX-5u-3vD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="HYD-ff-Zl2" id="6jb-uB-XrJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H52-g8-pCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="-247"/>
+            <point key="canvasLocation" x="1050" y="140"/>
         </scene>
         <!--Astronomical Image View Controller-->
         <scene sceneID="tcl-Uj-Yfc">
@@ -109,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4Y-yo-Z1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="421"/>
+            <point key="canvasLocation" x="1453" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pbu-Gv-2XP">

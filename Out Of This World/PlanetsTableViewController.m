@@ -8,8 +8,8 @@
 
 #import "PlanetsTableViewController.h"
 #import "AstronomicalObject.h"
-#import "AstronomicalImageViewController.h"
 #import "AstronomicalData.h"
+#import "PlanetInfoViewController.h"
 
 @interface PlanetsTableViewController ()
 
@@ -56,8 +56,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.destinationViewController isKindOfClass:[AstronomicalImageViewController class]]) {
-        AstronomicalImageViewController *viewController = segue.destinationViewController;
+    
+    if ([segue.destinationViewController isKindOfClass:[PlanetInfoViewController class]]) {
+        PlanetInfoViewController *viewController = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         viewController.astronomicalObject = [self.outerSpaceBodies objectAtIndex:indexPath.row];
     }
