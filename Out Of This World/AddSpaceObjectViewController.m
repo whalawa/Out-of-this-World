@@ -10,6 +10,8 @@
 
 @interface AddSpaceObjectViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+
 @end
 
 @implementation AddSpaceObjectViewController
@@ -26,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"HubbleDeepFieldByNasa.jpg"]];
 	// Do any additional setup after loading the view.
 }
 

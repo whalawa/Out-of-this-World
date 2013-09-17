@@ -196,7 +196,7 @@
 
 - (void)addSpaceObjectViewController:(AddSpaceObjectViewController *)viewController didAddAstronomicalObject:(AstronomicalObject *)astronomicalObject
 {
-    NSLog(@"Added");
+    [self.mySpaceObjects addObject:astronomicalObject];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

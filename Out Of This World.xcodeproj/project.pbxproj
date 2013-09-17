@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F504AFCB17E9193D00D8AFC0 /* AddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F504AFCA17E9193D00D8AFC0 /* AddSpaceObjectViewController.m */; };
+		F504AFCD17E91FCF00D8AFC0 /* HubbleDeepFieldByNasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F504AFCC17E91FCF00D8AFC0 /* HubbleDeepFieldByNasa.jpg */; };
 		F5A96C8F17E38AD4005E14AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A96C8E17E38AD4005E14AA /* Foundation.framework */; };
 		F5A96C9117E38AD4005E14AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A96C9017E38AD4005E14AA /* CoreGraphics.framework */; };
 		F5A96C9317E38AD4005E14AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A96C9217E38AD4005E14AA /* UIKit.framework */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		F504AFC917E9193D00D8AFC0 /* AddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSpaceObjectViewController.h; sourceTree = "<group>"; };
 		F504AFCA17E9193D00D8AFC0 /* AddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSpaceObjectViewController.m; sourceTree = "<group>"; };
+		F504AFCC17E91FCF00D8AFC0 /* HubbleDeepFieldByNasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HubbleDeepFieldByNasa.jpg; sourceTree = "<group>"; };
 		F5A96C8B17E38AD4005E14AA /* Out Of This World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out Of This World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A96C8E17E38AD4005E14AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5A96C9017E38AD4005E14AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,6 +207,7 @@
 				F5A96CCF17E396A2005E14AA /* Neptune.jpg */,
 				F5A96CD017E396A2005E14AA /* Saturn.jpg */,
 				F5A96CD117E396A2005E14AA /* Uranus.jpg */,
+				F504AFCC17E91FCF00D8AFC0 /* HubbleDeepFieldByNasa.jpg */,
 			);
 			name = "Planet Images";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				F5A96CD317E396A2005E14AA /* Mars.jpg in Resources */,
 				F5A96CD717E396A2005E14AA /* Neptune.jpg in Resources */,
 				F5A96CD417E396A2005E14AA /* Mercury.jpg in Resources */,
+				F504AFCD17E91FCF00D8AFC0 /* HubbleDeepFieldByNasa.jpg in Resources */,
 				F5A96CD517E396A2005E14AA /* Venus.jpg in Resources */,
 				F5A96CD917E396A2005E14AA /* Uranus.jpg in Resources */,
 				F5A96CD617E396A2005E14AA /* Jupiter.jpg in Resources */,
