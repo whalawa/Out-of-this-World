@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F504AFCB17E9193D00D8AFC0 /* AddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F504AFCA17E9193D00D8AFC0 /* AddSpaceObjectViewController.m */; };
 		F5A96C8F17E38AD4005E14AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A96C8E17E38AD4005E14AA /* Foundation.framework */; };
 		F5A96C9117E38AD4005E14AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A96C9017E38AD4005E14AA /* CoreGraphics.framework */; };
 		F5A96C9317E38AD4005E14AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A96C9217E38AD4005E14AA /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F504AFC917E9193D00D8AFC0 /* AddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		F504AFCA17E9193D00D8AFC0 /* AddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSpaceObjectViewController.m; sourceTree = "<group>"; };
 		F5A96C8B17E38AD4005E14AA /* Out Of This World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out Of This World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A96C8E17E38AD4005E14AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5A96C9017E38AD4005E14AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 				F5A96CC417E38B0B005E14AA /* PlanetsTableViewController.m */,
 				F5F1488B17E7A5BF007E17C6 /* PlanetInfoViewController.h */,
 				F5F1488C17E7A5BF007E17C6 /* PlanetInfoViewController.m */,
+				F504AFC917E9193D00D8AFC0 /* AddSpaceObjectViewController.h */,
+				F504AFCA17E9193D00D8AFC0 /* AddSpaceObjectViewController.m */,
 				F5A96CDA17E3A2C5005E14AA /* AstronomicalImageViewController.h */,
 				F5A96CDB17E3A2C5005E14AA /* AstronomicalImageViewController.m */,
 				F5A96CC617E38F96005E14AA /* AstronomicalObject.h */,
@@ -314,6 +319,7 @@
 				F5A96CC517E38B0B005E14AA /* PlanetsTableViewController.m in Sources */,
 				F5A96CC817E38F96005E14AA /* AstronomicalObject.m in Sources */,
 				F5A96CDC17E3A2C5005E14AA /* AstronomicalImageViewController.m in Sources */,
+				F504AFCB17E9193D00D8AFC0 /* AddSpaceObjectViewController.m in Sources */,
 				F5F1488D17E7A5BF007E17C6 /* PlanetInfoViewController.m in Sources */,
 				F5A96C9B17E38AD4005E14AA /* main.m in Sources */,
 				F5F1488A17E78F19007E17C6 /* AstronomicalData.m in Sources */,

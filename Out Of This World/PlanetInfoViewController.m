@@ -8,7 +8,6 @@
 
 #import "PlanetInfoViewController.h"
 #import "AstronomicalData.h"
-#import "AstronomicalImageViewController.h"
 
 @interface PlanetInfoViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -42,13 +41,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.destinationViewController isKindOfClass:[AstronomicalImageViewController class]]) {
-        AstronomicalImageViewController *viewController = segue.destinationViewController;
-        viewController.astronomicalObject = self.astronomicalObject;
-    }
-}
 
 # pragma mark - UITableView Data Source
 

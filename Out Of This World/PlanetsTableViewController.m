@@ -9,11 +9,14 @@
 #import "PlanetsTableViewController.h"
 #import "AstronomicalObject.h"
 #import "AstronomicalData.h"
+#import "AstronomicalImageViewController.h"
 #import "PlanetInfoViewController.h"
+#import "AddSpaceObjectViewController.h"
 
-@interface PlanetsTableViewController ()
+@interface PlanetsTableViewController () <AddSpaceObjectViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *outerSpaceBodies;
+@property (strong, nonatomic) NSMutableArray *mySpaceObjects;
 
 @end
 
@@ -28,9 +31,17 @@
     return self;
 }
 
+- (NSMutableArray *)mySpaceObjects
+{
+    if (!_mySpaceObjects) _mySpaceObjects = [[NSMutableArray alloc] init];
+    return _mySpaceObjects;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.view setBackgroundColor:[UIColor blackColor]];
     
     self.outerSpaceBodies = [[NSMutableArray alloc] init];
     
@@ -59,8 +70,19 @@
     
     if ([segue.destinationViewController isKindOfClass:[PlanetInfoViewController class]]) {
         PlanetInfoViewController *viewController = segue.destinationViewController;
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        viewController.astronomicalObject = [self.outerSpaceBodies objectAtIndex:indexPath.row];
+    }
+    
+    if ([segue.destinationViewController isKindOfClass:[AstronomicalImageViewController class]]) {
+        AstronomicalImageViewController *viewController = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         viewController.astronomicalObject = [self.outerSpaceBodies objectAtIndex:indexPath.row];
+    }
+    
+    if ([segue.destinationViewController isKindOfClass:[AddSpaceObjectViewController class]]) {
+        AddSpaceObjectViewController *viewController = segue.destinationViewController;
+        viewController.delegate = self;
     }
     
 }
@@ -69,32 +91,54 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.outerSpaceBodies count];
+    if (section == 0) return [self.outerSpaceBodies count];
+    else return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Planet Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    AstronomicalObject *spaceObject = [self.outerSpaceBodies objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = spaceObject.astronomicalInformation[PLANET_NAME];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Also known as %@", spaceObject.astronomicalInformation[PLANET_NICKNAME]];
-    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.75 alpha:1.0];
-    
-    cell.imageView.image = spaceObject.image;
+    if (indexPath.section == 0) {
+        AstronomicalObject *spaceObject = [self.outerSpaceBodies objectAtIndex:indexPath.row];
+        
+        cell.textLabel.text = spaceObject.astronomicalInformation[PLANET_NAME];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Also known as %@", spaceObject.astronomicalInformation[PLANET_NICKNAME]];
+        cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.75 alpha:1.0];
+        
+        cell.imageView.image = spaceObject.image;
+        
+    }
+
     
     return cell;
+
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"Planets";
+    } else {
+        return @"My Objects";
+    }
+}
+
+# pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"Show Details" sender:indexPath];
 }
 
 /*
@@ -147,5 +191,13 @@
 }
 
  */
+
+#pragma mark - AddSpaceObjectViewControllerDelegate
+
+- (void)addSpaceObjectViewController:(AddSpaceObjectViewController *)viewController didAddAstronomicalObject:(AstronomicalObject *)astronomicalObject
+{
+    NSLog(@"Added");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
