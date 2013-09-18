@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"HubbleDeepFieldByNasa.jpg"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Night_Sky_Stars_Trees_03ByMichael J. Bennett.jpg"]];
 	// Do any additional setup after loading the view.
 }
 
